@@ -1,0 +1,200 @@
+\documentclass[,article,oneside,notitlepage]{memoir}
+\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\usepackage{titlesec}
+\usepackage{titling}
+
+
+%Some pandoc variables
+\def\myauthor{Andrew Garland}
+\def\mytitle{Introduction}
+\def\mysubtitle{SEP Mock Senate}
+\def\mycopyright{\myauthor}
+\def\myemail{}
+\def\mydate{2013}
+\def\myspacing{}
+\def\mylandscape{}
+%-----------------------------------
+%Other customizations
+
+%Restyle Page Titles
+
+  \pretitle{\begin{flushleft}\huge}
+  \posttitle{\large \vspace{-0.5em}\par\mysubtitle\vspace{3em}  \par\end{flushleft}\normalsize\vspace{0.25ex}}
+  \preauthor{}
+  \postauthor{}
+  \predate{}
+  \postdate{}
+  
+%Restyle Section Titles
+\titleformat{\section}
+	{\normalfont\Large}
+	{\thesection}{1em}{\bfseries}
+	
+\titleformat{\subsection}
+	{\normalfont\large}
+	{\thesubsection}{1em}{\bfseries}
+	
+\titleformat{\subsubsection}
+	{\normalfont}
+	{\thesubsubsection}{1em}{\bfseries}
+	
+%\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+%\titlespacing\subsection{0pt}{9pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+%\titlespacing\subsubsection{0pt}{6pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+	
+\titlespacing*{\section}{0pt}{*4}{*-0.75}
+\titlespacing*{\subsection}{0pt}{*2.5}{*-0.5}
+\titlespacing*{\subsubsection}{0pt}{*0.75}{*-1.5}
+
+%Use custom linespacing if available
+
+
+%Add color package
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+
+%Headers and footers
+\textwidth=6in
+\makepagestyle{senate}
+\makeevenfoot{senate}{\small\color{gray}\mytitle}{\small\color{gray}\copyright\ \mydate\ by \myauthor}{\small\color{gray}p. \thepage}
+\makeoddfoot{senate}{\small\color{gray}\mytitle}{\small\color{gray}\copyright\ \mydate\ by \myauthor}{\small\color{gray}p. \thepage}
+
+\pagestyle{senate}
+
+\renewcommand*{\sideparfont}{\scriptsize}
+\sideparmargin{right}
+
+\usepackage{multicol}
+
+%-------------------------------------------------
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \usepackage{fontspec}
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+
+%Pick Palatino font for the mainfont if it's not specified already
+			\setmainfont{Adobe Caslon Pro}
+	  
+\fi
+
+%Set up landscape style
+	\usepackage[top=1in, bottom=1in,top=1in,bottom=1in,footskip=0.5in]{geometry}
+
+
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Andrew Garland},
+            pdftitle={Introduction},
+            colorlinks=true,
+            urlcolor=blue,
+            linkcolor=red,
+            pdfborder={0 0 0}}
+\setlength{\parindent}{12pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{0}
+
+
+
+\title{Introduction}
+%\author{Andrew Garland}
+%\date{2013}
+\date{}
+
+%\checkandfixthelayout %To set memoir margins, etc
+
+\begin{document}
+\maketitle
+\thispagestyle{senate}
+
+\section{Welcome!}
+
+\section{What you should learn}
+
+There are several general themes that we will focus on during these two
+weeks. Here is a brief (incomplete) list of things that I hope you know
+by the end of our time together:
+
+\begin{multicols}{2}
+\begin{enumerate}
+\item{What the Senate does}
+\item{Basic parliamentary procedure}
+\item{Basic political theory}
+\item{How to write a persuasive speech}
+\item{How to write a policy plan}
+\item{How to debate about public policy}
+\item{Basic ideological positions of both U.S. political parties}
+\end{enumerate}
+\end{multicols}
+
+\section{How this class will work}
+
+You will be assigned a role to play. I will try to assign you to play a
+senator of your choosing. Once your role is assigned, you will be
+expected to play that role throughout the rest of our Senate activities.
+
+We will try to model the actual working of the U.S. Senate. Because of
+our time and size constraints, the model will have to be simplified
+somewhat. But there should be enough similarity to give you a good sense
+of how the Senate actually works.
+
+I have a lot of information for you, and it will come very fast. But
+once we get into Senate activities, most of our time will be taken up by
+those activities and not my formal instruction.
+
+\section{Expectations}
+
+Here is a list of my primary expectations for you:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Participate
+\item
+  Be respectful (both of others' views and their desire to learn)
+\item
+  Play your role as well as you can
+\item
+  Write (or coauthor) at least one piece of legislation
+\item
+  Give at least two speeches on the floor
+\end{enumerate}
+
+\section{Schedule}
+
+See the calendar handout.
+
+\section{Talking to me}
+
+I am very open to suggestions about doing things differently. If you
+have an idea, please come talk to me about it.
+
+Once we are in the writing and debating stage, I expect there will be
+time for you to get personalized help from me about your writing and
+speaking. I will provide what help I can, and you should feel free to
+ask for it.
+
+If something is not going well (whatever it is), please talk to me about
+it as soon as you can.
+
+\end{document}
